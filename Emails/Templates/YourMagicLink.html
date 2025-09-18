@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Connexion sécurisée - FoodSave</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f8f9fa;
+        }
+
+        .container {
+            background-color: #ffffff;
+            border-radius: 12px;
+            padding: 40px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            margin: 20px 0;
+        }
+
+        h2 {
+            color: #2c5530;
+            font-size: 28px;
+            font-weight: 700;
+            margin-bottom: 20px;
+            text-align: center;
+            border-bottom: 3px solid #4CAF50;
+            padding-bottom: 15px;
+        }
+
+        p {
+            font-size: 16px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .magic-link-text {
+            color: #666;
+            font-size: 14px;
+            margin-bottom: 30px;
+            background-color: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 4px solid #4CAF50;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background-color: #4CAF50;
+            color: white;
+            text-decoration: none;
+            padding: 15px 30px;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 16px;
+            text-align: center;
+            transition: background-color 0.3s ease;
+            box-shadow: 0 2px 4px rgba(76, 175, 80, 0.3);
+        }
+
+        .cta-button:hover {
+            background-color: #45a049;
+            box-shadow: 0 4px 8px rgba(76, 175, 80, 0.4);
+        }
+
+        .footer {
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #eee;
+            text-align: center;
+            color: #888;
+            font-size: 12px;
+        }
+
+        .logo {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .logo-text {
+            font-size: 24px;
+            font-weight: bold;
+            color: #2c5530;
+            letter-spacing: 2px;
+        }
+
+        .highlight {
+            color: #4CAF50;
+            font-weight: 600;
+        }
+
+        .security-info {
+            background-color: #fff3cd;
+            border: 1px solid #ffeaa7;
+            border-radius: 8px;
+            padding: 15px;
+            margin: 20px 0;
+            font-size: 14px;
+            color: #856404;
+        }
+
+        .security-info strong {
+            color: #533f00;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="logo">
+            <div class="logo-text">FOODSAVE</div>
+        </div>
+
+        <h2>Connexion sécurisée</h2>
+
+        <div class="magic-link-text">
+            <p>🔐 Voici votre lien de connexion sécurisé pour accéder à votre compte FoodSave.</p>
+            <p>Ce lien est <span class="highlight">personnel et temporaire</span> - il expirera dans les prochaines 24 heures pour des raisons de sécurité.</p>
+        </div>
+
+        <div class="security-info">
+            <strong>ℹ️ Information de sécurité :</strong><br>
+            Vous recevez cet email car une demande de connexion a été faite sur FoodSave.
+            Si ce n'était pas vous, vous pouvez ignorer cet email.
+        </div>
+
+        <p>Pour vous connecter instantanément à votre compte, cliquez sur le bouton ci-dessous :</p>
+
+        <div style="text-align: center; margin: 30px 0;">
+            <a href="{{ .ConfirmationURL }}" class="cta-button">Se connecter à FoodSave</a>
+        </div>
+
+        <p style="font-size: 14px; color: #666; text-align: center;">
+            Si le bouton ne fonctionne pas, vous pouvez également copier-coller ce lien dans votre navigateur :<br>
+            <span style="word-break: break-all; color: #4CAF50;">{{ .ConfirmationURL }}</span>
+        </p>
+    </div>
+
+    <div class="footer">
+        <p>FoodSave - Connexion sécurisée sans mot de passe</p>
+        <p>Pour votre sécurité, ce lien expirera automatiquement après utilisation.</p>
+    </div>
+</body>
+</html>

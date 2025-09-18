@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Invitation à rejoindre FoodSave</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f8f9fa;
+        }
+
+        .container {
+            background-color: #ffffff;
+            border-radius: 12px;
+            padding: 40px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            margin: 20px 0;
+        }
+
+        h2 {
+            color: #2c5530;
+            font-size: 28px;
+            font-weight: 700;
+            margin-bottom: 20px;
+            text-align: center;
+            border-bottom: 3px solid #4CAF50;
+            padding-bottom: 15px;
+        }
+
+        p {
+            font-size: 16px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .invitation-text {
+            color: #666;
+            font-size: 14px;
+            margin-bottom: 30px;
+            background-color: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 4px solid #4CAF50;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background-color: #4CAF50;
+            color: white;
+            text-decoration: none;
+            padding: 15px 30px;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 16px;
+            text-align: center;
+            transition: background-color 0.3s ease;
+            box-shadow: 0 2px 4px rgba(76, 175, 80, 0.3);
+        }
+
+        .cta-button:hover {
+            background-color: #45a049;
+            box-shadow: 0 4px 8px rgba(76, 175, 80, 0.4);
+        }
+
+        .footer {
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #eee;
+            text-align: center;
+            color: #888;
+            font-size: 12px;
+        }
+
+        .logo {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .logo-text {
+            font-size: 24px;
+            font-weight: bold;
+            color: #2c5530;
+            letter-spacing: 2px;
+        }
+
+        .highlight {
+            color: #4CAF50;
+            font-weight: 600;
+        }
+
+        .site-link {
+            color: #2c5530;
+            font-weight: 500;
+            text-decoration: none;
+            border-bottom: 1px solid #2c5530;
+        }
+
+        .site-link:hover {
+            color: #4CAF50;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="logo">
+            <div class="logo-text">FOODSAVE</div>
+        </div>
+
+        <h2>Vous êtes invité !</h2>
+
+        <div class="invitation-text">
+            <p>🎉 Bonne nouvelle ! Vous avez été invité à rejoindre la communauté <span class="highlight">FoodSave</span> !</p>
+            <p>Notre plateforme vous permet de partager et de récupérer des aliments invendus, contribuant ainsi à réduire le gaspillage alimentaire et à aider ceux qui en ont besoin.</p>
+        </div>
+
+        <p>Pour accepter cette invitation et créer votre compte, cliquez sur le bouton ci-dessous :</p>
+
+        <div style="text-align: center; margin: 30px 0;">
+            <a href="{{ .ConfirmationURL }}" class="cta-button">Accepter l'invitation</a>
+        </div>
+
+        <p style="font-size: 14px; color: #666; text-align: center;">
+            Si le bouton ne fonctionne pas, vous pouvez également copier-coller ce lien dans votre navigateur :<br>
+            <span style="word-break: break-all; color: #4CAF50;">{{ .ConfirmationURL }}</span>
+        </p>
+
+        <p style="text-align: center; margin-top: 30px;">
+            <a href="{{ .SiteURL }}" class="site-link">Visitez FoodSave</a>
+        </p>
+    </div>
+
+    <div class="footer">
+        <p>FoodSave - Ensemble, partageons la nourriture, sauvons la planète</p>
+        <p>Si vous n'attendiez pas cette invitation, vous pouvez ignorer cet email en toute sécurité.</p>
+    </div>
+</body>
+</html>
